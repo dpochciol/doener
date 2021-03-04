@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="column">Lorem Ipsum nis pe</div>
       </div>
     </div>
-    
+
   )
 }
 
