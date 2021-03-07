@@ -4,16 +4,16 @@ import Navbar from './Navbar';
 
 const Header = () => {
   return(
-    <div class="ui secondary  menu">
+    <div className="ui secondary  menu">
       <Navbar />
-      <div class="right menu">
-        <div class="item">
-          <div class="ui icon input">
+      <div className="right menu">
+        <div className="item">
+          <div className="ui icon input">
             <input type="text" placeholder="Search..." />
-            <i class="search link icon"></i>
+            <i className="search link icon"></i>
           </div>
         </div>
-        <a class="ui item">
+        <a className="ui item">
           Logout
         </a>
       </div>
