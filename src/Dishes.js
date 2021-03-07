@@ -1,47 +1,33 @@
+import { render } from '@testing-library/react';
 import React from 'react';
 import Card from './components/Card';
+import Video from './components/Video';
+import './css/horizontal.css';
 
 
-const Dish = () => {
+
+const Dish = ({values}) => {
+
+console.log(values);
+
+const renderCards = values.map(({fields}) => {
+  console.log(fields);
   return(
-    <div className="ui link cards">
-      <div className="ui grid">
-        <div className="six wide column image">
-          <img src="/images/avatar2/large/matthew.png" />
-        </div>
-        <div className="ten wide column content">
-          <div className="header">Matt Giampietro</div>
-          <div className="meta">
-            <a>Friends</a>
-          </div>
-          <div className="description">
-            Matthew is an interior designer living in New York.
-          </div>
-        </div>
+    <Card value={fields} />
+  )
+})
 
-        <div className="ten wide extra content">
-          <span className="right floated">
-            <div className="ui image label">
-              <img src="/images/avatar/small/ade.jpg" />
-              Adrienne
-            </div>
-          </span>
-          <span>
-          <div className="ui label">
-            <i className=""></i> Created at
-          </div>
-          </span>
-          <span>
-            <i className="user icon"></i>
-            Rating
-          </span>
-        </div>
-        <div className="six wide extra content">
-        Continue
-        </div>
+  return(
+    <div className="ui two column centered grid">
+      <div className="nine wide column">
+
+        {renderCards}
+
+      </div>
+      <div className="six wide column min-500">
+        <Video />
       </div>
     </div>
-
   )
 }
 

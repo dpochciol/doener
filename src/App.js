@@ -12,26 +12,22 @@ import Community from './Community'
 
 
 function App() {
-
   const [values, setValues] = useState();
 
   useEffect(() => {
     client.getEntries()
     .then((res) => {
-      console.log(res.items)
-      setValues()
-      
+      setValues([res, values][0].items)
     })
     .catch(console.error);
-    
   },[]);
-  console.log(values);
+
   return (
     <Router>
       <div className="App">
         <Header />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/dish" component={Dishes} />
+        <Route exact path="/"  component={Home} />
+        {values ?<Route exact path="/dish"><Dishes values={values}/></Route> : 'Loading...'}
         <Route exact path="/community" component={Community} />
         {/* <Route exact path="/community" render={() => <Community />} /> */}
         <Footer />
