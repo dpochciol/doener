@@ -28,7 +28,7 @@ function App() {
         <Header />
         <Route exact path="/"  component={Home} />
         {values ?<Route exact path="/dish"><Dishes values={values}/></Route> : 'Loading...'}
-        <Route exact path="/community" component={Community} />
+        {values ?<Route exact path="/community"><Community values={values}/></Route>: 'Loading...'}
         {/* <Route exact path="/community" render={() => <Community />} /> */}
         <Footer />
       </div>
