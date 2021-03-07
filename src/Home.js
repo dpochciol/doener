@@ -1,11 +1,15 @@
 import React from 'react';
+import Map from './components/HomeMap'
 
 
 const Home = () => {
   return(
     <div>
-      Home
+      <div>Banner</div>
+      <div>Vision/Mission</div>
+      <Map />
     </div>
+
   )
 }
 
