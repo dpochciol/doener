@@ -8,10 +8,7 @@ import './css/horizontal.css';
 
 const Dish = ({values}) => {
 
-console.log(values);
-
 const renderCards = values.map(({fields}) => {
-  console.log(fields);
   return(
     <Card value={fields} />
   )

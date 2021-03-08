@@ -15,12 +15,12 @@ const Card = ({value:{author, createdDate, profilePicture, kurzbeschreibung, tot
           {kurzbeschreibung}
           <div className="ui star rating" data-rating="3"></div>
         </div>
-        
+
         <a className="header">Kristy</a>
         <div className="meta">
           <span className="date">Joined in 2013</span>
         </div>
-        
+
 
       </div>
     </div>
