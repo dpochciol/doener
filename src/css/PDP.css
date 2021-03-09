@@ -1,0 +1,7 @@
+.ProfileArea{
+  display: flex;
+}
+.leaflet-container {
+  width: auto;
+  height: 20rem;
+}
