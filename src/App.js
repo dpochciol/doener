@@ -7,13 +7,21 @@ import Footer from './components/Footer';
 
 import Home from './Home';
 import Dishes from './Dishes';
-import Community from './Community'
+import Community from './Community';
 
 
 
 function App() {
   const [values, setValues] = useState();
+  const [current, setCurrent] = useState();
 
+  const setCurrentValue = (value) => {
+    
+    setCurrent(value);
+    console.log(current);
+  }
+
+  console.log(setCurrent);
   useEffect(() => {
     client.getEntries()
     .then((res) => {
@@ -27,8 +35,8 @@ function App() {
       <div className="App">
         <Header />
         <Route exact path="/"  component={Home} />
-        {values ?<Route exact path="/dish"><Dishes values={values}/></Route> : 'Loading...'}
-        <Route exact path="/community" component={Community} />
+        {values ?<Route exact path="/dish"><Dishes values={values} setCurrentValue={setCurrentValue}/></Route> : 'Loading...'}
+        {current ?<Route exact path="/community"><Community current={current}/></Route> : 'Loading...'}
         {/* <Route exact path="/community" render={() => <Community />} /> */}
         <Footer />
       </div>
