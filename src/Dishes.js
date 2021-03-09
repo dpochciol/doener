@@ -1,33 +1,29 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 import Card from './components/Card';
-import Video from './components/Video';
 import './css/horizontal.css';
-
-
+import { Pagination } from 'semantic-ui-react';
 
 const Dish = ({values, setCurrentValue}) => {
-  console.log(values);
-
-
-const renderCards = values.map(({fields}) => {
-
-
-  // console.log(fields);
+const onPaginationClick = () => {
+  console.log('hallo');
+}
+const renderCards = values.map(({fields}, index) => {
   return(
-    <Card value={fields} setCurrentValue={setCurrentValue} />
+    <Card key={index} value={fields} setCurrentValue={setCurrentValue} />
   )
 })
 
   return(
     <div className="ui two column centered grid">
       <div className="nine wide column">
-
         {renderCards}
-
+        <Pagination
+        defaultActivePage={1}
+        totalPages={3}
+        onPageChange={onPaginationClick}
+      />
       </div>
       <div className="six wide column min-500">
-        <Video />
       </div>
     </div>
   )
