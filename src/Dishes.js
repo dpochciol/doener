@@ -6,14 +6,16 @@ import './css/horizontal.css';
 
 
 
-const Dish = ({values}) => {
+const Dish = ({values, setCurrentValue}) => {
+  console.log(values);
 
-console.log(values);
 
 const renderCards = values.map(({fields}) => {
-  console.log(fields);
+
+
+  // console.log(fields);
   return(
-    <Card value={fields} />
+    <Card value={fields} setCurrentValue={setCurrentValue} />
   )
 })
 

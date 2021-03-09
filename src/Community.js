@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-const Community = () => {
+const Community = ({current}) => {
+  console.log(current);
   return(
     <div>
       Community
