@@ -19,9 +19,11 @@ const Card = ({value, setCurrentValue}) => {
           {value.kurzbeschreibung}
           <div className="ui star rating" data-rating="3"></div>
         </div>
+
         <div className="meta">
           <span className="date">Joined: {value.createdDate}</span>
         </div>
+
       </div>
     </div>
   )

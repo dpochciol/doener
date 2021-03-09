@@ -3,11 +3,13 @@ import Card from './components/Card';
 import './css/horizontal.css';
 import { Pagination } from 'semantic-ui-react';
 
+
 const Dish = ({values, setCurrentValue}) => {
 const onPaginationClick = () => {
   console.log('hallo');
 }
 const renderCards = values.map(({fields}, index) => {
+
   return(
     <Card key={index} value={fields} setCurrentValue={setCurrentValue} />
   )
