@@ -5,7 +5,8 @@ import Ratings from './components/Rating'
 import StoreLocation from './components/StoreLocation'
 
 
-const Community = ({values}) => {
+const Community = ({current}) => {
+  // console.log(current);
   return(
     <div class="ui internally celled grid">
     <div class="row">
