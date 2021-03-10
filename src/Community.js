@@ -5,46 +5,30 @@ import Ratings from './components/Rating'
 import StoreLocation from './components/StoreLocation'
 
 
-const Community = ({current:
-                    {storename,
-                    profilePicture,
-                    gallery,
-                    beschreibung,
-                    author,
-                    location:{lat, lon},
-                    ratingBread,
-                    ratingMeat,
-                    ratingSalad,
-                    ratingSauce,
-                    totalRating,
-                  }}) => {
+const Community = ({current}) => {
   return(
-    <div class="ui internally celled grid">
-    <div class="row">
-      <div class="six wide column">
-        <Profile values={profilePicture, gallery}/>
+    <div className="ui internally celled grid">
+    <div className="row">
+      <div className="six wide column ProfileArea">
+        <Profile current={current}/>
       </div>
-      <div class="nine wide column">
-        <p>{beschreibung}</p>
+      <div className="nine wide column">
+        <p>{current.beschreibung}</p>
       </div>
     </div>
-    <div class="row">
-    <div class="six wide column">
-      <Ratings values={ratingBread,
-      ratingMeat,
-      ratingSalad,
-      ratingSauce,
-      totalRating}/>
+    <div className="row">
+    <div className="six wide column">
+      <Ratings current={current}/>
     </div>
-      <div class="nine wide column">
+      <div className="nine wide column">
         <p></p>
       </div>
     </div>
-    <div class="row">
-    <div class="six wide column">
-      // StoreLocation values={lat,lon}/
+    <div className="row">
+    <div className="six wide column">
+
     </div>
-      <div class="nine wide column">
+      <div className="nine wide column">
         <p></p>
       </div>
     </div>

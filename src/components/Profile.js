@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import Gallery from './Gallery';
 
-const Profile = ({profilePicture}) => {
-
+const Profile = ({current}) => {
+console.log(current.profilePicture.fields.file.url)
   return (
     <div>
-      <div><img src="{profilePicture}"/></div>
+      <div><img src={current.profilePicture.fields.file.url}/></div>
     </div>
   )
 }
