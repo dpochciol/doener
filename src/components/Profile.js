@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Gallery from './Gallery';
+import '../css/PDP.css';
 
 const Profile = ({current}) => {
 console.log(current.profilePicture.fields.file.url)

@@ -26,7 +26,6 @@ const Community = ({current}) => {
     </div>
     <div className="row">
     <div className="six wide column">
-
     </div>
       <div className="nine wide column">
         <p></p>
