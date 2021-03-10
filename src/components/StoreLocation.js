@@ -6,19 +6,19 @@ import 'leaflet/dist/leaflet.css';
 import markerCustom from '../assets/images/doner-kebab.svg'
 
 const StoreLocation = ({current}) => {
-  console.log(current.lon);
+  console.log(current.location);
   const icon = new Icon({
   iconUrl: markerCustom,
   iconSize: [35, 35]
 });
   return (
     <div>
-    <MapContainer center={[current.lon, current.lat]} zoom={13} scrollWheelZoom={false}>
+    <MapContainer center={[current.location.lat, current.location.lon]} zoom={13} scrollWheelZoom={false}>
   <TileLayer
     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   />
-  <Marker position={[current.lon, current.lat]} icon={icon}>
+  <Marker position={[current.location.lat, current.location.lon] } icon={icon}>
     <Popup>
       A pretty CSS3 popup. <br /> Easily customizable.
     </Popup>
