@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 
 const Header = () => {
   return(
-    <div className="ui secondary  menu">
+    <div className="ui secondary menu">
       <Navbar />
       <div className="right menu">
         <div className="item">

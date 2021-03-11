@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 const Footer = () => {
   return(
     <div>
@@ -19,7 +20,7 @@ const Footer = () => {
         <div className="column">Lorem Ipsum nis pe</div>
       </div>
     </div>
-    
+
   )
 }
 

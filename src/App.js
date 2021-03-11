@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 import Home from './Home';
 import Dishes from './Dishes';
-import Community from './Community';
+import Community from './Community'
 
 function App() {
   const [values, setValues] = useState();
@@ -31,8 +31,9 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Route exact path="/"  component={Home} />
-
+        <Route exact path="/">
+          <Home values={values}/>
+        </Route>
         <Route exact path="/dish"> {values ? <Dishes values={values} setCurrentValue={setCurrentValue}/> : 'Loading...'} </Route>
         <Route exact path="/community">{current ? <Community current={current}/> : 'Loading...'} </Route>
         <Footer />
