@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Rating } from 'semantic-ui-react'
 
 const Card = ({value, setCurrentValue}) => {
-  // console.log(value);
+  // console.log(key);
   return(
     <div className="ui card horizontal">
       <div className="image">
