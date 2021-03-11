@@ -7,13 +7,9 @@ import Comments from './components/Comments';
 
 import { Grid, Image } from 'semantic-ui-react';
 
-<<<<<<< HEAD
+
 
 const Community = ({current}) => {
-=======
-const Community = ({current}) => {
-  // console.log(current);
->>>>>>> master
   return(
     <div>
     <h1>{current.storename}</h1>
