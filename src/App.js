@@ -13,19 +13,27 @@ import Community from './Community'
 function App() {
   const [values, setValues] = useState();
   const [current, setCurrent] = useState();
+  const [page, setPage] = useState(1);
 
   const setCurrentValue = (value) => {
     setCurrent(value);
   }
+  const setCurrentPage = (c) => {
+    const newPage = parseInt(c.target.attributes.value.value);
+    console.log(newPage);
+    setPage(newPage);
+  }
 
   useEffect(() => {
-    client.getEntries()
+    client.getEntries({
+      limit:4,
+      skip:(page - 1) * 4
+    })
     .then((res) => {
-      console.log(res);
       setValues([res, values][0].items)
     })
     .catch(console.error);
-  },[]);
+  },[page]);
 
   return (
     <Router>
@@ -34,7 +42,7 @@ function App() {
         <Route exact path="/">
           <Home values={values}/>
         </Route>
-        <Route exact path="/dish"> {values ? <Dishes values={values} setCurrentValue={setCurrentValue}/> : 'Loading...'} </Route>
+        <Route exact path="/dish"> {values ? <Dishes values={values} setCurrentValue={setCurrentValue} setCurrentPage={setCurrentPage} page={page}/> : 'Loading...'} </Route>
         <Route exact path="/community">{current ? <Community current={current}/> : 'Loading...'} </Route>
         <Footer />
       </div>
