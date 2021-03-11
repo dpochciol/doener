@@ -9,7 +9,7 @@ import Diashow from './components/Diashow';
 
 
 
-const Dish = ({values, setCurrentValue}) => {
+const Dish = ({values, setCurrentValue, setCurrentPage, page}) => {
 
 
 
@@ -30,9 +30,10 @@ const Dish = ({values, setCurrentValue}) => {
       <div className="nine wide column">
         {renderCards}
         <Pagination
-        defaultActivePage={1}
-        totalPages={3}
-        onPageChange={onPaginationClick}
+        onPageChange={setCurrentPage}
+        defaultActivePage={page}
+        activePage={page}
+        totalPages={5}
       />
       </div>
       <div className="six wide column min-500 container">
