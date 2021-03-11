@@ -35,3 +35,12 @@ video {
 .min-500{
   min-width: 500px;
 }
+
+.ui .one .column .centered .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  min-width: 400px;
+  width: 100%;
+}
