@@ -8,6 +8,7 @@ import Diashow from './components/Diashow';
 
 
 
+
 const Dish = ({values, setCurrentValue}) => {
 
 
@@ -22,6 +23,7 @@ const Dish = ({values, setCurrentValue}) => {
       <Card key={index} value={fields} setCurrentValue={setCurrentValue} />
     )
   })
+
 
   return(
     <div className="ui two column centered grid">
@@ -38,8 +40,6 @@ const Dish = ({values, setCurrentValue}) => {
           <div className="ui hidden divider"></div>
           <Diashow />
       </div>
-
-      
 
     </div>
   )

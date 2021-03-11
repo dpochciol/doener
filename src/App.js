@@ -32,6 +32,7 @@ function App() {
       <div className="App">
         <Header />
         <Route exact path="/"  component={Home} />
+
         <Route exact path="/dish"> {values ? <Dishes values={values} setCurrentValue={setCurrentValue}/> : 'Loading...'} </Route>
         <Route exact path="/community">{current ? <Community current={current}/> : 'Loading...'} </Route>
         <Footer />
