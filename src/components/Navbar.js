@@ -11,7 +11,7 @@ const Navbar = () =>{
     <nav className="ui secondary menu">
       <img src="/images/NavLogo.jpg" width={60}/>
       <Link className="item" to="/">Home</Link>
-      <Link className="item" to="/dish">About Us</Link>
+      <Link className="item" to="/dish">Articles</Link>
       <Link className="item" to="/community">Feedback</Link>
     </nav>
   )
