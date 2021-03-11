@@ -32,6 +32,7 @@ const Card = ({value, setCurrentValue}) => {
                 <Label as='a' image><img src='https://react.semantic-ui.com/images/avatar/small/stevie.jpg' />{value.author}</Label>
             </Grid.Column>
             <Grid.Column>
+              
               Joined: <Moment fromNow date={value.createdDate}/>
             </Grid.Column>
             <Grid.Column>
