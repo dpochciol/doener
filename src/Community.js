@@ -2,38 +2,38 @@ import React from 'react';
 import Profile from './components/Profile';
 import './css/PDP.css';
 import Ratings from './components/Rating'
-import StoreLocation from './components/StoreLocation'
+import StoreLocation from './components/StoreLocation';
+import Comments from './components/Comments';
+
+import { Grid, Image } from 'semantic-ui-react';
+
 
 
 const Community = ({current}) => {
-  console.log(current);
   return(
-    <div class="ui internally celled grid">
-    <div class="row">
-      <div class="six wide column">
-        <Profile values={values}/>
-      </div>
-      <div class="nine wide column">
-        <p>{values[0].fields.beschreibung}</p>
-      </div>
+    <div>
+    <h1>{current.storename}</h1>
+    <Grid celled='internally'>
+        <Grid.Row>
+          <Grid.Column width={6} className="ProfileArea">
+            <Profile current={current}/>
+            <br/>
+            <Ratings current={current}/>
+          </Grid.Column>
+          <Grid.Column width={10}>
+            <p>{current.beschreibung}</p>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={6}>
+            <StoreLocation current={current}/>
+          </Grid.Column>
+          <Grid.Column width={10}>
+            <Comments/>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     </div>
-    <div class="row">
-    <div class="six wide column">
-      <Ratings values={values}/>
-    </div>
-      <div class="nine wide column">
-        <p></p>
-      </div>
-    </div>
-    <div class="row">
-    <div class="six wide column">
-      <StoreLocation values={values}/>
-    </div>
-      <div class="nine wide column">
-        <p></p>
-      </div>
-    </div>
-  </div>
   )
 }
 
