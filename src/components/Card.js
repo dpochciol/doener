@@ -20,17 +20,9 @@ const Card = ({value, setCurrentValue}) => {
           <div className="ui star rating" data-rating="3"></div>
         </div>
 
-<<<<<<< HEAD
-        <a className="header">Kristy</a>
-=======
->>>>>>> master
         <div className="meta">
           <span className="date">Joined: {value.createdDate}</span>
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 
       </div>
     </div>

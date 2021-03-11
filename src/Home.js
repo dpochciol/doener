@@ -7,7 +7,7 @@ import './css/Leaflet.css'
 
 
 
-const Home = () => {
+const Home = ({values}) => {
   return(
     <div className="ui grid">
       <div className="ui one column centered row">
@@ -21,7 +21,7 @@ const Home = () => {
         </div>
 
         <div className="six wide column">
-          <Map />
+          <Map values={values}/>
         </div>
 
       </div>
