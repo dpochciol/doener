@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
 import Gallery from './Gallery';
+import '../css/PDP.css';
+import { Grid, Image } from 'semantic-ui-react';
 
-const Profile = ({values}) => {
-  console.log(values[0].fields.profilePicture.fields.file.url);
-  const[currentPic, setCurrentPic] = useState(values[0].fields.profilePicture.fields.file.url)
-
+const Profile = ({current}) => {
+console.log(current.profilePicture.fields.file.url)
   return (
-    <div>
-      <div><img src="{currentPic}"/></div>
-      <div><Gallery setCurrentPic={setCurrentPic}/></div>
-    </div>
+      <div>
+      <Image src={current.profilePicture.fields.file.url} />
+      </div>
   )
 }
 

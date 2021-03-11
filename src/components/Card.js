@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import { Rating } from 'semantic-ui-react'
 
 const Card = ({value, setCurrentValue}) => {
-  console.log(value);
+  // console.log(value);
   return(
     <div className="ui card horizontal">
       <div className="image">
-        <img src={value.profilePicture ? value.profilePicture.fields.file.url : ''} />
+        <img style={{height:"150px"}} src={value.profilePicture ? value.profilePicture.fields.file.url : ''} />
       </div>
       <div className="content">
         <span className="header">{value.storename}</span>
