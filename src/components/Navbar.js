@@ -12,7 +12,7 @@ const Navbar = () =>{
       <img src="/images/NavLogo.jpg" width={60}/>
       <Link className="item" to="/">Home</Link>
       <Link className="item" to="/dish">Articles</Link>
-      <Link className="item" to="/community">Feedback</Link>
+      <Link className="item" to="/feedback">Feedback</Link>
     </nav>
   )
 }

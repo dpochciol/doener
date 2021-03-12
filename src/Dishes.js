@@ -11,9 +11,6 @@ import Diashow from './components/Diashow';
 
 const Dish = ({values, setCurrentValue, setCurrentPage, page}) => {
 
-
-
-
   const onPaginationClick = () => {
     console.log('hallo');
   }
