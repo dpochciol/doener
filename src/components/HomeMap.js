@@ -4,14 +4,14 @@ import "leaflet/dist/leaflet.css";
 import markerCustom from "../assets/images/doner-kebab.svg";
 import "leaflet/dist/images/marker-shadow.png";
 import { Icon } from "leaflet";
+import { Link } from "react-router-dom";
 
-
-const Map = ({values}) => {
+const Map = ({ values }) => {
   const icon = new Icon({
     iconUrl: markerCustom,
     iconSize: [35, 35],
   });
-
+  console.log(values);
   return (
     <MapContainer
       center={[52.520008, 13.404954]}
@@ -22,13 +22,20 @@ const Map = ({values}) => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {values && values.map((markerlocation) => (
-        <Marker position={[markerlocation.fields.location.lat, markerlocation.fields.location.lon]} icon={icon}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      ))}
+      {values &&
+        values.map((markerlocation) => (
+          <Marker
+            position={[
+              markerlocation.fields.location.lat,
+              markerlocation.fields.location.lon,
+            ]}
+            icon={icon}
+          >
+            <Popup>
+              <Link to="/community">{markerlocation.fields.storename}</Link>
+            </Popup>
+          </Marker>
+        ))}
     </MapContainer>
   );
 };

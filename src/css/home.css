@@ -1,0 +1,19 @@
+.Banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 200px;
+  width: 1000px;
+  border: 10px;
+  background-image: url(../img/Doenerbanner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-color: black;
+  border: 10px;
+}
+
+.ui .two .column .row{
+  display: flex;
+  margin: 10px;
+}
