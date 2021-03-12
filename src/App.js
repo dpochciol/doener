@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { client } from './client';
 
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Feedback from './components/feedback';
 
 import Home from './Home';
 import Dishes from './Dishes';
@@ -37,15 +38,16 @@ function App() {
 
   return (
     <Router>
+      <Switch>
       <div className="App">
         <Header />
-        <Route exact path="/">
-          <Home values={values}/>
-        </Route>
+        <Route exact path="/"><Home values={values}/></Route>
         <Route exact path="/dish"> {values ? <Dishes values={values} setCurrentValue={setCurrentValue} setCurrentPage={setCurrentPage} page={page}/> : 'Loading...'} </Route>
-        <Route exact path="/community">{current ? <Community current={current}/> : 'Loading...'} </Route>
+        <Route exact path="/dish/:id">{current ? <Community current={current}/> : 'Loading...'} </Route>
+        <Route exact path="feedback"><Feedback/></Route>
         <Footer />
       </div>
+      </Switch>
     </Router>
   );
 }

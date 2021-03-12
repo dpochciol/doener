@@ -1,7 +1,31 @@
-.ProfileArea{
+.rec-slider-container{
   display: flex;
+  vertical-align: center
 }
 .leaflet-container {
   width: auto;
   height: 20rem;
+}
+.Description{
+  font-size: 1.2rem !important;
+  text-align: justify;
+}
+.ProfileCarousel{
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.signature{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-style: italic;
+}
+.ProfileTitle{
+  justify-content: center;
+}
+.PDP{
+  display: inline;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
