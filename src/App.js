@@ -44,7 +44,7 @@ function App() {
         <Route exact path="/"><Home values={values}/></Route>
         <Route exact path="/dish"> {values ? <Dishes values={values} setCurrentValue={setCurrentValue} setCurrentPage={setCurrentPage} page={page}/> : 'Loading...'} </Route>
         <Route exact path="/dish/:id">{current ? <Community current={current}/> : 'Loading...'} </Route>
-        <Route exact path="feedback"><Feedback/></Route>
+        <Route exact path="/feedback"><Feedback/></Route>
         <Footer />
       </div>
       </Switch>

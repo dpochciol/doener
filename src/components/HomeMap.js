@@ -53,7 +53,7 @@ const Map = () => {
             icon={icon}
           >
             <Popup>
-              <Link to="/community">{markerlocation.fields.storename}</Link>
+              <Link to={`dish/${markerlocation.sys.id}`}>{markerlocation.fields.storename}</Link>
             </Popup>
           </Marker>
         ))}

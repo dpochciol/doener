@@ -16,7 +16,7 @@ const Community = ({current, match}) => {
     <div className="PDP">
     <div>
     <Grid celled='internally'>
-        <Grid.Row>
+        <Grid.Row className="centered">
           <Grid.Column width={6} className="ProfileArea">
             <Profile current={current}/>
             <br/>

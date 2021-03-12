@@ -20,7 +20,7 @@ const StoreLocation = ({current}) => {
   />
   <Marker position={[current.location.lat, current.location.lon] } icon={icon}>
     <Popup>
-      A pretty CSS3 popup. <br /> Easily customizable.
+      {current.storename}
     </Popup>
   </Marker>
 </MapContainer>

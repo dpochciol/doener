@@ -15,7 +15,7 @@ const Home = ({values}) => {
         <Banner />
       </div>
 
-      <div className="ui two column row">
+      <div className="ui two column centered row">
 
         <div className="nine wide column">
           <VisionMission />

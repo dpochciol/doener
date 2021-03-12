@@ -1,5 +1,5 @@
-import React from 'react';
-import { Form, Input, TextArea, Button, Select } from 'semantic-ui-react';
+import React from 'react'
+import { Form, Input, TextArea, Button, Select } from 'semantic-ui-react'
 
 const genderOptions = [
   { key: 'm', text: 'Male', value: 'male' },
@@ -7,8 +7,10 @@ const genderOptions = [
   { key: 'o', text: 'Other', value: 'other' },
 ]
 
-const Feedback = () => (
-  <Form>
+const Feedback = () => {
+  return (
+    <Form>
+    <h3> Please leave a feedback and suggestions! </h3>
     <Form.Group widths='equal'>
       <Form.Field
         id='form-input-control-first-name'
@@ -51,9 +53,9 @@ const Feedback = () => (
       id='form-button-control-public'
       control={Button}
       content='Confirm'
-      label='Label with htmlFor'
     />
   </Form>
-)
+  )
+}
 
-export default Feedback;
+export default Feedback
