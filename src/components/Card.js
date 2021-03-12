@@ -33,7 +33,7 @@ const Card = ({value, setCurrentValue}) => {
             </Grid.Column>
             <Grid.Column>
 
-              Joined: <Moment fromNow date={value.createdDate}/>
+              Released: <Moment fromNow date={value.createdDate}/>
             </Grid.Column>
             <Grid.Column>
               <Rating icon='star' defaultRating={value.totalRating/2} maxRating={5} />

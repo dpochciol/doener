@@ -5,7 +5,7 @@ import Ratings from './components/Rating'
 import StoreLocation from './components/StoreLocation';
 import Comments from './components/Comments';
 import Moment from 'react-moment';
-
+import { Link } from "react-router-dom";
 import { Grid, Image } from 'semantic-ui-react';
 
 
@@ -31,6 +31,12 @@ const Community = ({current, match}) => {
             <div className="signature">
             <span>Author: {current.author}</span>
             <span>Released: <Moment fromNow date={current.createdDate}/></span>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div>
+            <Link className="ui primary basic button" to="/dish"> Read more Articles </Link>
             </div>
           </Grid.Column>
         </Grid.Row>
