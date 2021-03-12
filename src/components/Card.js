@@ -2,28 +2,44 @@ import React from 'react';
 import '../css/horizontal.css';
 import '../js/rating';
 import { Link } from "react-router-dom";
-import { Rating } from 'semantic-ui-react'
+import { Rating, Label, Grid } from 'semantic-ui-react';
+import Moment from 'react-moment';
 
 const Card = ({value, setCurrentValue}) => {
-  // console.log(key);
+  console.log(value);
   return(
     <div className="ui card horizontal">
       <div className="image">
-        <img style={{height:"150px"}} src={value.profilePicture ? value.profilePicture.fields.file.url : ''} />
+        <img style={{height:"170px"}} src={value.profilePicture ? value.profilePicture.fields.file.url : ''} />
       </div>
       <div className="content">
-        <span className="header">{value.storename}</span>
-        <Rating icon='star' defaultRating={value.totalRating/2} maxRating={5} />
-        <span><Link onClick={() => setCurrentValue(value)} className="ui primary basic button" to="community">Details</Link></span>
-        <div className="description">
-          {value.kurzbeschreibung}
-          <div className="ui star rating" data-rating="3"></div>
-        </div>
-
-        <div className="meta">
-          <span className="date">Joined: {value.createdDate}</span>
-        </div>
-
+        <Grid >
+          <Grid.Row columns={2} color='black'>
+            <Grid.Column>
+              {value.storename}
+            </Grid.Column>
+            <Grid.Column textAlign='right'>
+              <Link onClick={() => setCurrentValue(value)} className="ui primary basic button" to="community">Details</Link>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row columns={1}>
+            <Grid.Column>
+              {value.kurzbeschreibung}
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row columns={3}>
+            <Grid.Column>
+                <Label as='a' image><img src='https://react.semantic-ui.com/images/avatar/small/stevie.jpg' />{value.author}</Label>
+            </Grid.Column>
+            <Grid.Column>
+              
+              Joined: <Moment fromNow date={value.createdDate}/>
+            </Grid.Column>
+            <Grid.Column>
+              <Rating icon='star' defaultRating={value.totalRating/2} maxRating={5} />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
     </div>
   )
