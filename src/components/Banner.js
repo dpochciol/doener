@@ -1,9 +1,11 @@
 import React from 'react'
+import '../css/home.css'
 
-function MyComponent() {
+
+function Banner() {
   return (
-    <div>MyComponent</div>
+    <div className="Banner"></div>
   )
 }
 
-export default MyComponent
+export default Banner;
