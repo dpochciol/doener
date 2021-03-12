@@ -19,7 +19,7 @@ const Card = ({value, setCurrentValue}) => {
               {value.storename}
             </Grid.Column>
             <Grid.Column textAlign='right'>
-              <Link onClick={() => setCurrentValue(value)} className="ui primary basic button" to="community">Details</Link>
+              <Link onClick={() => setCurrentValue(value)} className="ui primary basic button" to={`dish/${value.profilePicture.sys.id}`}>Details</Link>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row columns={1}>
@@ -32,7 +32,7 @@ const Card = ({value, setCurrentValue}) => {
                 <Label as='a' image><img src='https://react.semantic-ui.com/images/avatar/small/stevie.jpg' />{value.author}</Label>
             </Grid.Column>
             <Grid.Column>
-              
+
               Joined: <Moment fromNow date={value.createdDate}/>
             </Grid.Column>
             <Grid.Column>
