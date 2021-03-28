@@ -10,12 +10,12 @@ import Diashow from './components/Diashow';
 
 
 const Dish = ({values, setCurrentValue, setCurrentPage, page}) => {
-
+console.log(values);
   const onPaginationClick = () => {
     console.log('hallo');
   }
 
-  const renderCards = values.map(({fields}, index) => {
+  const renderCards = values.map((fields , index) => {
     return(
       <Card key={index} value={fields} setCurrentValue={setCurrentValue} />
     )

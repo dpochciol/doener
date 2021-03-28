@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { client } from './client';
+import axios from 'axios';
+
 
 
 import Header from './components/Header';
@@ -25,16 +27,22 @@ function App() {
     setPage(newPage);
   }
 
+  // useEffect(() => {
+  //   client.getEntries({
+  //     limit:4,
+  //     skip:(page - 1) * 4
+  //   })
+  //   .then((res) => {
+  //     setValues([res, values][0].items)
+  //   })
+  //   .catch(console.error);
+  // },[page]);
+
   useEffect(() => {
-    client.getEntries({
-      limit:4,
-      skip:(page - 1) * 4
-    })
-    .then((res) => {
-      setValues([res, values][0].items)
-    })
-    .catch(console.error);
-  },[page]);
+    axios
+    .get('https://doenercheck24.herokuapp.com/restaurants/')
+    .then(( {data} ) => setValues(data))
+  },[])
 
   return (
     <Router>
