@@ -5,13 +5,13 @@ import '../css/PDP.css';
 import Carousel from 'react-elastic-carousel';
 
 
-const Profile = ({current:{gallery, profile_url}}) => {
+const Profile = ({current:{gallery_1_url, gallery_2_url, profile_url}}) => {
   return (
       <div>
       <Carousel>
-      <Image src={profile_url} />
-      {gallery && gallery.map((data) => (
-      <Image src={profile_url} />))}
+        <Image><img src={profile_url}/></Image>
+        <Image><img src={gallery_2_url}/></Image>
+        <Image><img src={gallery_1_url}/></Image>
       </Carousel>
       </div>
   )
