@@ -10,7 +10,7 @@ const Card = ({value, setCurrentValue}) => {
   return(
     <div className="ui card horizontal">
       <div className="image">
-        <img style={{height:"170px"}} src={value.profilePicture ? value.profilePicture.fields.file.url : ''} />
+        <img style={{height:"170px"}} src={value.profile_url} />
       </div>
       <div className="content">
         <Grid >
@@ -19,7 +19,7 @@ const Card = ({value, setCurrentValue}) => {
               {value.storename}
             </Grid.Column>
             <Grid.Column textAlign='right'>
-              <Link onClick={() => setCurrentValue(value)} className="ui primary basic button" to={`dish/${value.profilePicture.sys.id}`}>Details</Link>
+              <Link onClick={() => setCurrentValue(value)} className="ui primary basic button" to={`dish/${value.id}`}>Details</Link>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row columns={1}>
@@ -36,7 +36,7 @@ const Card = ({value, setCurrentValue}) => {
               Released: <Moment fromNow date={value.createdDate}/>
             </Grid.Column>
             <Grid.Column>
-              <Rating icon='star' defaultRating={value.totalRating/2} maxRating={5} />
+              <Rating icon='star' defaultRating={value.rating_rating/2} maxRating={5} />
             </Grid.Column>
           </Grid.Row>
         </Grid>

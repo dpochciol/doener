@@ -11,7 +11,7 @@ import { Grid, Image } from 'semantic-ui-react';
 
 
 const Community = ({current, match}) => {
-  console.log(match);
+  console.log(current);
   return(
     <div className="PDP">
     <div>

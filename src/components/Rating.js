@@ -9,27 +9,27 @@ const Ratings = ({current}) => {
       <Table.Body>
         <Table.Row>
           <Table.Cell>Brot:</Table.Cell>
-          <Table.Cell><Rating defaultRating={current.ratingBread} maxRating={10} disabled /></Table.Cell>
+          <Table.Cell><Rating defaultRating={current.rating_bread} maxRating={10} disabled /></Table.Cell>
           <Table.Cell>{current.ratingBread}</Table.Cell>
         </Table.Row>
         <Table.Row>
           <Table.Cell>Fleisch:</Table.Cell>
-          <Table.Cell><Rating defaultRating={current.ratingMeat} maxRating={10} disabled /></Table.Cell>
+          <Table.Cell><Rating defaultRating={current.rating_meat} maxRating={10} disabled /></Table.Cell>
           <Table.Cell>{current.ratingMeat}</Table.Cell>
         </Table.Row>
         <Table.Row>
           <Table.Cell>Salat:</Table.Cell>
-          <Table.Cell><Rating defaultRating={current.ratingSalad} maxRating={10} disabled /></Table.Cell>
+          <Table.Cell><Rating defaultRating={current.rating_salad} maxRating={10} disabled /></Table.Cell>
           <Table.Cell>{current.ratingSalad}</Table.Cell>
         </Table.Row>
         <Table.Row>
           <Table.Cell>Soße:</Table.Cell>
-          <Table.Cell><Rating defaultRating={current.ratingSauce} maxRating={10} disabled /></Table.Cell>
+          <Table.Cell><Rating defaultRating={current.rating_sauce} maxRating={10} disabled /></Table.Cell>
           <Table.Cell>{current.ratingSauce}</Table.Cell>
         </Table.Row>
         <Table.Row>
           <Table.Cell>Gesamtbewertung:</Table.Cell>
-          <Table.Cell><Rating defaultRating={current.totalRating} maxRating={10} disabled /></Table.Cell>
+          <Table.Cell><Rating defaultRating={current.rating_rating} maxRating={10} disabled /></Table.Cell>
           <Table.Cell>{current.totalRating}</Table.Cell>
         </Table.Row>
       </Table.Body>
